@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');  
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+}
+
+body,html{
+width: 100%;
+height: 100vh;
+ }
+
+ .wrapper{
+   font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .first{
+
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+
+    .cards{
+        display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 3vw;
+
+       input{
+        display: none;
+        
+    }
+   
+       .card{
+            height: 50vh;
+           position: relative;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+           border: 2px solid #000;
+           border-radius: 2vw;
+
+           input:checked ~ .card-content{
+            width: 30vw;
+            transition: 0.25s;
+        }
+
+
+           .card-content{
+            border-radius: 2vw;
+            width: 10vw;
+            padding: 2vw;
+             display: flex;
+            justify-content:start;
+            align-items: end;
+            
+            height: 100%;
+
+            p{
+               color: #fff;
+            }
+           }
+           
+           
+   
+           label{
+            cursor: pointer;
+               width: 100%;
+               height: 100%;
+               top: 0;
+               left: 0;
+               position: absolute;
+           }
+   
+           
+       }
+
+      .card:first-child{
+         background: url(./img/one.jpg)0 0/cover no-repeat;
+      }
+
+      .card:nth-child(2){
+         background: url(./img/two.png)0 0/cover no-repeat;
+      }
+
+      .card:nth-child(3){
+         background: url(./img/three.png)0 0/cover no-repeat;
+      }
+
+      .card:nth-child(4){
+         background: url(./img/four.png)0 0/cover no-repeat;
+      }
+
+      .card:nth-child(5){
+         background: url(./img/five.png)0 0/cover no-repeat;
+      }
+
+    }
+ }
