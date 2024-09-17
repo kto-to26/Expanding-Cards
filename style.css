@@ -13,6 +13,7 @@ body, html {
 }
 
 .wrapper {
+  position: relative;
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
   width: 100%;
@@ -21,6 +22,7 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 5vh;
 }
 
 .first {
@@ -29,6 +31,7 @@ body, html {
   align-items: center;
   flex-direction: column;
   gap: 2vh;
+  display: none;
 }
 .first .cards {
   display: flex;
@@ -86,4 +89,91 @@ body, html {
 }
 .first .cards .card:nth-child(5) {
   background: url(./img/five.png) 0 0/cover no-repeat;
+}
+
+.second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vh;
+  display: none;
+}
+.second .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+.second .cards input {
+  display: none;
+}
+.second .cards .active {
+  width: 30vw;
+  transition: 0.5s;
+}
+.second .cards .card {
+  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 2vw;
+}
+.second .cards .card input:checked ~ .card-content {
+  width: 30vw;
+  transition: 0.25s;
+}
+.second .cards .card .card-content {
+  cursor: pointer;
+  border-radius: 2vw;
+  width: 10vw;
+  padding: 2vw;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  height: 100%;
+}
+.second .cards .card .card-content p {
+  color: #fff;
+}
+.second .cards .card:first-child {
+  background: url(./img/one.jpg) 0 0/cover no-repeat;
+}
+.second .cards .card:nth-child(2) {
+  background: url(./img/two.png) 0 0/cover no-repeat;
+}
+.second .cards .card:nth-child(3) {
+  background: url(./img/three.png) 0 0/cover no-repeat;
+}
+.second .cards .card:nth-child(4) {
+  background: url(./img/four.png) 0 0/cover no-repeat;
+}
+.second .cards .card:nth-child(5) {
+  background: url(./img/five.png) 0 0/cover no-repeat;
+}
+
+.option {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+}
+.option .btn {
+  width: 10vw;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1vw;
+  background: none;
+  border: 2px solid #000;
+  border-radius: 1vw;
+  transition: 0.25s;
+}
+.option .btn:hover {
+  background: #000;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
